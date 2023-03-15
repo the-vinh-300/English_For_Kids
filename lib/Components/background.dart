@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class BackGround extends StatelessWidget {
   final Widget child;
-  const BackGround({super.key, required this.child});
+  String path;
+  BackGround({super.key, required this.child, required this.path});
 
   @override
   Widget build(BuildContext context) {
@@ -10,9 +12,8 @@ class BackGround extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('assets/bg.png'), fit: BoxFit.cover)),
+        decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage(path), fit: BoxFit.cover)),
         child: SafeArea(child: child),
       ),
     );

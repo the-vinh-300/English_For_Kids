@@ -1,4 +1,4 @@
-import 'package:english_for_kids/Screens/welcome.dart';
+import 'package:english_for_kids/Screens/Welcome/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
